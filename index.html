@@ -22,13 +22,15 @@
             --dark-white: #E1E1E1;
             --blood-red: #BF6060;
 
-            /* base dimensions */
+            /* base properties */
+            --content-grid-columns: auto;
             --padding: 8px;
             --gap: 8px;
             --title-bar-height: 82px;
             --content-padding-x: 16px;
             --border-radius-rounded: 8px;
             --border-radius-cirle: 100px;
+
 
         }
 
@@ -91,7 +93,7 @@
 
         .content {
             display: grid;
-            grid-template-columns: auto;
+            grid-template-columns: var(--content-grid-columns);
             gap: 16px;
             min-height: 100vh;
             flex: 1;
@@ -180,9 +182,9 @@
             border: 1px solid var(--outline);
             background: transparent;
         }
-        
+
         .switch {
-            display: flex;    
+            display: flex;
             flex-flow: row;
             gap: 16px;
             padding: 8px;
@@ -191,17 +193,17 @@
             border-radius: var(--border-radius-cirle);
             cursor: pointer;
         }
-        
+
         .switch-icon {
             flex: 1;
             padding: 10px;
             border-radius: var(--border-radius-cirle);
         }
-        
+
         .switch-icon path {
             stroke: var(--primary-text);
         }
-        
+
         .dark #moon {
             background: var(--primary);
 
@@ -209,6 +211,26 @@
 
         .light #sun {
             background: var(--primary);
+        }
+
+
+        /*Media queries*/
+
+        /* tablets */
+        @media (min-width: 768px) {
+            :root {
+                --content-grid-columns: auto auto;
+                --content-padding-x: 80px;
+            }
+        }
+
+        /* desktop */
+        @media (min-width: 992px) {
+            :root {
+                --content-grid-columns: auto auto auto;
+                --content-padding-x: 100px;
+            }
+
         }
     </style>
 </head>
@@ -219,12 +241,16 @@
             <div id="dark-light-switch" class="switch">
                 <div id="moon" class="switch-icon">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18.6736 13.031C17.0369 13.6892 15.2427 13.8518 13.5143 13.4987C11.7858 13.1456 10.1993 12.2923 8.95181 11.0448C7.70436 9.79738 6.85103 8.21081 6.49791 6.48236C6.14478 4.7539 6.30743 2.95977 6.96563 1.323C5.02734 2.10373 3.421 3.53439 2.42196 5.36972C1.42292 7.20505 1.09342 9.33074 1.48995 11.3824C1.88647 13.434 2.98432 15.2839 4.59529 16.6148C6.20626 17.9457 8.23002 18.6747 10.3196 18.677C12.1166 18.6771 13.8724 18.1394 15.3612 17.1332C16.85 16.127 18.0036 14.6983 18.6736 13.031Z" stroke="#2F3240" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path
+                            d="M18.6736 13.031C17.0369 13.6892 15.2427 13.8518 13.5143 13.4987C11.7858 13.1456 10.1993 12.2923 8.95181 11.0448C7.70436 9.79738 6.85103 8.21081 6.49791 6.48236C6.14478 4.7539 6.30743 2.95977 6.96563 1.323C5.02734 2.10373 3.421 3.53439 2.42196 5.36972C1.42292 7.20505 1.09342 9.33074 1.48995 11.3824C1.88647 13.434 2.98432 15.2839 4.59529 16.6148C6.20626 17.9457 8.23002 18.6747 10.3196 18.677C12.1166 18.6771 13.8724 18.1394 15.3612 17.1332C16.85 16.127 18.0036 14.6983 18.6736 13.031Z"
+                            stroke="#2F3240" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </div>
                 <div id="sun" class="switch-icon">
                     <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.6736 1V2M10.6736 18V19M19.6736 10H18.6736M2.67365 10H1.67365M17.0376 16.364L16.3306 15.657M5.01664 4.343L4.30965 3.636M17.0376 3.636L16.3306 4.343M5.01664 15.657L4.30965 16.364M14.6736 10C14.6736 11.0609 14.2522 12.0783 13.5021 12.8284C12.7519 13.5786 11.7345 14 10.6736 14C9.61278 14 8.59536 13.5786 7.84522 12.8284C7.09507 12.0783 6.67365 11.0609 6.67365 10C6.67365 8.93913 7.09507 7.92172 7.84522 7.17157C8.59536 6.42143 9.61278 6 10.6736 6C11.7345 6 12.7519 6.42143 13.5021 7.17157C14.2522 7.92172 14.6736 8.93913 14.6736 10Z" stroke="#2F3240" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path
+                            d="M10.6736 1V2M10.6736 18V19M19.6736 10H18.6736M2.67365 10H1.67365M17.0376 16.364L16.3306 15.657M5.01664 4.343L4.30965 3.636M17.0376 3.636L16.3306 4.343M5.01664 15.657L4.30965 16.364M14.6736 10C14.6736 11.0609 14.2522 12.0783 13.5021 12.8284C12.7519 13.5786 11.7345 14 10.6736 14C9.61278 14 8.59536 13.5786 7.84522 12.8284C7.09507 12.0783 6.67365 11.0609 6.67365 10C6.67365 8.93913 7.09507 7.92172 7.84522 7.17157C8.59536 6.42143 9.61278 6 10.6736 6C11.7345 6 12.7519 6.42143 13.5021 7.17157C14.2522 7.92172 14.6736 8.93913 14.6736 10Z"
+                            stroke="#2F3240" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </div>
             </div>
@@ -264,13 +290,13 @@
 
         // duplicate profile items
         const profileElem = document.querySelector(".profile");
-        for(let i = 0; i < 14; i++){
+        for (let i = 0; i < 14; i++) {
             const elem = profileElem.cloneNode();
             elem.innerHTML = profileElem.innerHTML;
             profileElem.parentNode.appendChild(elem);
         }
 
-        
+
         // add darkLight click handler
         const darkLightSwitchElem = document.getElementById("dark-light-switch");
         darkLightSwitchElem.addEventListener('click', () => {
