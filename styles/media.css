@@ -1,0 +1,17 @@
+/*Media queries*/
+
+/* tablets */
+@media (min-width: 768px) {
+    :root {
+        --content-grid-columns: auto auto;
+        --content-padding-x: 80px;
+    }
+}
+
+/* desktop */
+@media (min-width: 992px) {
+    :root {
+        --content-grid-columns: auto auto auto;
+        --content-padding-x: 100px;
+    }
+}

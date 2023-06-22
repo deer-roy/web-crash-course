@@ -1,0 +1,12 @@
+/* utils */
+.primary-text {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--primary-text);
+}
+
+.secondary-text {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--secondary-text);
+}

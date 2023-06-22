@@ -1,0 +1,137 @@
+/* components */
+.container {
+    display: flex;
+    flex-flow: column;
+}
+
+.title-bar {
+    height: var(--title-bar-height);
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--primary);
+    border-bottom: 1px solid var(--outline);
+}
+
+.content {
+    display: grid;
+    grid-template-columns: var(--content-grid-columns);
+    gap: 16px;
+    min-height: 100vh;
+    flex: 1;
+    padding: 16px var(--content-padding-x);
+
+    background: var(--secondary);
+}
+
+.profile {
+    /* max-width: 264px; */
+    height: 222px;
+    display: flex;
+    flex-flow: column;
+    gap: var(--gap);
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--primary);
+    border-radius: var(--border-radius-rounded);
+}
+
+.headline {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    gap: var(--gap);
+    width: 100%;
+}
+
+.icon {
+    --size: 36px;
+    width: var(--size);
+    height: var(--size);
+    position: relative;
+
+    border-radius: 100px;
+    background: var(--white);
+    border: 1px solid var(--outline);
+}
+
+.icon::after {
+    --size: 70%;
+    content: "";
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    background: var(--blood-red);
+    border-radius: 100px;
+}
+
+.user {
+    display: flex;
+    flex-flow: column;
+    flex: 1;
+    padding: var(--padding);
+    gap: 4px;
+}
+
+.stats {
+    display: flex;
+    flex-flow: row;
+    padding: var(--padding);
+    gap: var(--gap);
+}
+
+.stats-item {
+    display: flex;
+    flex-flow: column;
+    padding: var(--padding);
+    gap: var(--gap);
+    flex: 1;
+}
+
+.btn-message {
+    width: 100%;
+    padding: 16px;
+
+    border-radius: var(--border-radius-rounded);
+    border: 1px solid var(--outline);
+    background: transparent;
+}
+
+.switch {
+    display: flex;
+    flex-flow: row;
+    gap: 16px;
+    padding: 8px;
+
+    background: var(--secondary);
+    border-radius: var(--border-radius-cirle);
+    cursor: pointer;
+}
+
+.switch-icon {
+    flex: 1;
+    padding: 10px;
+    border-radius: var(--border-radius-cirle);
+}
+
+.switch-icon path {
+    stroke: var(--primary-text);
+}
+
+.dark #moon {
+    background: var(--primary);
+}
+
+.light #sun {
+    background: var(--primary);
+}

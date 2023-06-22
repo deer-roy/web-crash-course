@@ -1,0 +1,17 @@
+/* dark theme */
+.dark {
+    --primary: var(--slate-dark);
+    --secondary: var(--slate-light);
+    --outline: var(--gray-dark);
+    --primary-text: var(--white);
+    --secondary-text: var(--gray-light);
+}
+
+/* light theme */
+.light {
+    --primary: var(--white);
+    --secondary: var(--off-white);
+    --outline: var(--dark-white);
+    --primary-text: var(--slate-dark);
+    --secondary-text: var(--gray-light);
+}
