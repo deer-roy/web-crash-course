@@ -1,35 +1,5 @@
+@import url('./base.css');
 @import url('./components.css');
 @import url('./utils.css');
 @import url('./media.css');
 @import url('./themes.css');
-
-:root {
-    font-family: "Raleway", sans-serif;
-
-    /* base colours */
-    --slate-dark: #2f3240;
-    --slate-light: #3b3e4b;
-    --gray-dark: #525562;
-    --gray-light: #a8a8a8;
-    --white: #fff;
-    --off-white: #f5f5f5;
-    --dark-white: #e1e1e1;
-    --blood-red: #bf6060;
-
-    /* base properties */
-    --content-grid-columns: auto;
-    --padding: 8px;
-    --gap: 8px;
-    --title-bar-height: 82px;
-    --content-padding-x: 16px;
-    --border-radius-rounded: 8px;
-    --border-radius-cirle: 100px;
-}
-
-html,
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: inherit;
-}
